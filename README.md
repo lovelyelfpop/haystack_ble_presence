@@ -40,15 +40,24 @@
            ├── ...
    ```
 
-2. 重启 Home Assistant。
+2. 重启 Home Assistant（也可以做完下面一步再重启 HA）。
 
 ---
 
 ## 使用方法
 
-### 1. 准备密钥目录
+### 1. 准备密钥目录和文件
 
-默认目录为 `/config/haystack_keys`，**不存在会自动创建**。把每台设备的一个 JSON 文件放进去即可。
+默认目录为 `/config/haystack_keys`（添加集成时可以自己定义），**不存在会自动创建**。把每台设备的一个 JSON 密钥文件放进去即可。
+
+密钥文件目录结构如下：
+```
+<config>/
+└── haystack_keys/
+    ├── IG5CW8_devices.json
+    ├── CSXEUY_devices.json
+    ├── ...
+```
 
 JSON 文件示例：
 
