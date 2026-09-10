@@ -32,7 +32,13 @@
 
 ## 安装
 
-1. 把整个 `haystack_ble_presence` 文件夹放到 HA 配置目录的 `custom_components/` 下：
+安装方式二选一
+1. 使用 HACS 安装
+   HACS → 集成 → 右上角三个点 → 自定义仓库，添加 https://github.com/lovelyelfpop/haystack_ble_presence, 类别选择 "Integration"。
+   搜索"Haystack BLE Presence"并安装  
+
+2. 手动安装
+   下载最新 release，解压后把整个 `custom_components/haystack_ble_presence` 文件夹放到 HA 配置目录的 `custom_components/` 下：
 
    ```
    <config>/
@@ -43,7 +49,7 @@
            ├── ...
    ```
 
-2. 重启 Home Assistant（也可以做完下面一步再重启 HA）。
+安装后重启 Home Assistant（也可以做完下面一步再重启 HA）。
 
 ---
 
