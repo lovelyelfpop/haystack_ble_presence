@@ -1,0 +1,4 @@
+rescan:
+  name: Rescan key files
+  description: Re-read all configured device JSON files and rebuild the device / MAC index without restarting Home Assistant.
+  fields: {}

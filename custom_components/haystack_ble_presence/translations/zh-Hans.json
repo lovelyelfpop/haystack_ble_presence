@@ -1,0 +1,63 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Haystack BLE 在线检测",
+        "description": "密钥文件会在 Home Assistant 启动或本集成被重新加载时读取一次。目录不存在时会自动创建。把每台设备的一个 JSON 文件(结构与 ./1.json 类似,含 privateKey / additionalKeys)放进目录即可。",
+        "data": {
+          "dirs": "密钥文件目录(每行一个路径)",
+          "offline_timeout": "设备多久未收到广播判定为离家(秒)"
+        }
+      }
+    },
+    "error": {
+      "empty_dirs": "请至少填写一个目录路径。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Haystack BLE 在线检测选项",
+        "description": "存放设备密钥 JSON 文件的目录(不存在时自动创建;密钥文件只会在保存本表单时重新读取)和设备多久未收到广播判定为离家。",
+        "data": {
+          "dirs": "密钥文件目录(每行一个路径)",
+          "offline_timeout": "设备多久未收到广播判定为离家(秒)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "presence": {
+        "name": "在家状态",
+        "state": {
+          "on": "在家",
+          "off": "离家"
+        }
+      }
+    },
+    "sensor": {
+      "last_seen": {
+        "name": "最近发现时间"
+      },
+      "rssi": {
+        "name": "信号强度"
+      },
+      "proxy": {
+        "name": "接收代理"
+      },
+      "proxy_area": {
+        "name": "接收代理所在区域"
+      },
+      "battery": {
+        "name": "电量",
+        "state": {
+          "ok": "正常",
+          "medium": "中等",
+          "low": "低",
+          "critical": "极低"
+        }
+      }
+    }
+  }
+}

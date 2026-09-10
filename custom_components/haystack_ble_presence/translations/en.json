@@ -1,0 +1,63 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Haystack BLE presence",
+        "description": "Key files are read once when Home Assistant starts or this integration is reloaded. The directory is created automatically when it does not exist yet. Put one JSON file per device (structure similar to ./1.json with privateKey / additionalKeys) into the directory.",
+        "data": {
+          "dirs": "Key file directories (one path per line)",
+          "offline_timeout": "Mark a device as away when it has not been seen for (seconds)"
+        }
+      }
+    },
+    "error": {
+      "empty_dirs": "Enter at least one directory path."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Haystack BLE presence options",
+        "description": "Directories with the device JSON key files (created automatically if they do not exist; key files are only re-read when you save this form) and how long a device must be unseen before it is considered away.",
+        "data": {
+          "dirs": "Key file directories (one path per line)",
+          "offline_timeout": "Mark a device as away when it has not been seen for (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "presence": {
+        "name": "Presence",
+        "state": {
+          "on": "At home",
+          "off": "Away"
+        }
+      }
+    },
+    "sensor": {
+      "last_seen": {
+        "name": "Last seen"
+      },
+      "rssi": {
+        "name": "RSSI"
+      },
+      "proxy": {
+        "name": "Receiving proxy"
+      },
+      "proxy_area": {
+        "name": "Proxy area"
+      },
+      "battery": {
+        "name": "Battery",
+        "state": {
+          "ok": "OK",
+          "medium": "Medium",
+          "low": "Low",
+          "critical": "Critical"
+        }
+      }
+    }
+  }
+}

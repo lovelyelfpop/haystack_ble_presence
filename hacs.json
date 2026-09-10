@@ -1,0 +1,6 @@
+{
+    "name": "Haystack BLE Presence",
+    "render_readme": true,
+    "country": ["US","CN"],
+    "homeassistant": "2023.12.0"
+}
